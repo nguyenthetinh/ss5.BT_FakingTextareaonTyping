@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input style=" width: 300px;height: 150px ;position: absolute;left: 300px;top:200px ;color: red ;" id="hienthi" type="text" onkeypress="myFunction()" />
+<script>
+    let macdinh=["T","ô","i"," ","r","ấ","t"," ","y","ê","u"," ","e","m"];
+    let ketqua="";
+    function myFunction() {
+        let hienthi=document.getElementById("hienthi").value;
+        let tt=hienthi.length;
+        for (let i = 0; i < tt; i++) {
+            ketqua += macdinh[i];
+            if (i == macdinh.length) {
+                ketqua = "";
+            }
+        }
+        document.getElementById("hienthi").value = ketqua;
+        ketqua="";
+        setTimeout("myFunction()",0.5);
+    }
+</script>
+</body>
+</html>
